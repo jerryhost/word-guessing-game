@@ -1,6 +1,6 @@
 # 猜字遊戲 (Word Guessing Game)
 
-這是一個簡單的命令列猜字遊戲，玩家需要猜測程式隨機選擇的單字。遊戲支援設定猜錯的次數限制，也可以選擇不限次數。
+這是一個簡單的猜字遊戲。最初是一個命令列版本，現在也提供了互動式的 HTML5 版本。
 
 ## 功能
 
@@ -13,6 +13,8 @@
 
 ## 如何執行遊戲
 
+### 命令列版本 (Python)
+
 1.  **複製專案**：
     ```bash
     git clone git@github.com:jerryhost/word-guessing-game.git
@@ -24,6 +26,18 @@
     python3 main.py
     ```
     遊戲啟動後，會提示您輸入猜錯的次數限制。輸入 `0` 表示不限次數。
+
+### HTML5 版本
+
+1.  **複製專案**：
+    ```bash
+    git clone git@github.com:jerryhost/word-guessing-game.git
+    cd word-guessing-game
+    ```
+
+2.  **開啟遊戲**：
+    直接在瀏覽器中開啟 `HTML5/index.html` 檔案即可。
+    遊戲開始前，您可以設定猜錯的次數限制 (輸入 `0` 表示不限次數)。猜對單字後會有煙火特效。
 
 ## 如何執行測試
 
@@ -44,14 +58,21 @@
 
 ```
 word-guessing-game/
-├── main.py             # 遊戲的主要邏輯程式碼
+├── main.py             # 命令列遊戲的主要邏輯程式碼
+├── HTML5/              # HTML5 版本的遊戲檔案
+│   ├── index.html      # 遊戲主頁面
+│   ├── script.js       # 遊戲邏輯 (JavaScript)
+│   └── style.css       # 遊戲樣式 (CSS)
 ├── tests/              # 包含單元測試的目錄
 │   └── test_game.py    # 遊戲邏輯的單元測試
-└── .gitignore          # Git 忽略檔案配置
+├── .gitignore          # Git 忽略檔案配置
 └── README.md           # 專案說明文件
 ```
 
 ## 使用技術
 
 *   Python 3
-
+*   HTML5
+*   CSS3
+*   JavaScript
+*   fireworks-js (用於煙火特效)
